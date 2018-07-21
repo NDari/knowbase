@@ -1,23 +1,25 @@
-#definition #gnattCharts #projectManagement {A Gantt chart is a type of bar chart that illustrates a project schedule, named after its inventor, Henry Gantt (1861–1919), who designed such a chart around the years 1910–1915. Modern Gantt charts also show the dependency relationships between activities and current schedule status. They do not help determine which schedule is best.}
-#algorithmsToLiveBy #scheduling #algorithms #definition #johnsonsRule {Johnson's rule or algorithm tries to minimize idle time between workers which are doing tasks must be done in sequence, such as washing and drying many load of laundary}
-#algorithmsToLiveBy #scheduling #algorithms #johnsonsRule {Johnson's rule is to start the shortest independent tasks first and shortest dependent task last. Sorting tasks like this minimizes idle time and maximizes total work per unit of time}
-#algorithmsToLiveBy #scheduling #algorithms {in scheduling for a single machine, if we have to do all tasks then the schedule does not matter. This assumes that tasks have no effect on each other}
-#algorithmsToLiveBy #scheduling #algorithms #definition #maximalLateness {of a set of tasks is the maximum of the lateness of the tasks}
-#algorithmsToLiveBy #scheduling #algorithms #definition #EarliestDueDate {is a scheduling method to reduce maximal lateness. For this, find the task due the soonest, and work your way down to the one due last}
-#algorithmsToLiveBy #scheduling #algorithms #EarliestDueDate {In earliest due date scheduling, the length of the tasks to be done is completely irrelavant, only when they are due. This the optimal strategy to reduce maximal lateness.}
-#algorithmsToLiveBy #scheduling #algorithms #EarliestDueDate {Earliest due date may cause some/all tasks to be late. It is only minimizing the max lateness, but it may make all tasks late by a smaller amount to do so.}
-#algorithmsToLiveBy #scheduling #algorithms #definition #mooreHodgeson {Moore-Hodgson algorithm is a scheduling method to reduce the number of late tasks. For this we start by sorting tasks by soonest due date. If it looks like we wont make a deadline, we remove/delete the most time-consuming task from the queue and repeat. If we cant delete, we can just put these tasks at the end of the queue since they will be late anyway}
-#algorithmsToLiveBy #scheduling #algorithms #definition #sumOfCompletionTimes {is the total time that completing a set of tasks takes}
-#algorithmsToLiveBy #scheduling #algorithms #definition #shortestProcessingTime {Shortest Processing Time or Shortest Job Next is the algorithm to optimally schedule for minimizing sum of completion times. For this, we always do the quickest task we can}
-#algorithmsToLiveBy #scheduling #algorithms #shortestProcessingTime {This is reccommanded in the book "Getting Things Done" in the format of "do any tasks that are < 2 minutes right away"}
-#algorithmsToLiveBy #scheduling #algorithms #shortestProcessingTime {allows the completion of the largest possible number of tasks, and minimizing the length of the todo list}
-#algorithmsToLiveBy #scheduling #algorithms #shortestProcessingTime {ignores the weight of tasks, i.e. their importance}
-#algorithmsToLiveBy #scheduling #algorithms #shortestProcessingTime {An implementation of this algorithm is the "snowball method" of paying the smallest debts first}
-#algorithmsToLiveBy #scheduling #definition #denialOfServiceAttack {flooding a scheduler with many superfluous requests to overwhelm it and prevent it from servicing anyone else}
-#algorithmsToLiveBy #scheduling #shortestProcessingTime {could lead into "hanging" as the quick and easy tasks keep coming in and prioritized at the expense of slower but more important tasks}
-#algorithmsToLiveBy #scheduling #algorithms #definition #weightedShortestProcessingTime {modifies shortest processing time by adding weights to tasks and doing the job with the highest weight to processing time ratio maximizes the value flow per unit of time}
-#algorithmsToLiveBy #scheduling #algorithms #weightedShortestProcessingTime {maximizes the value flow (e.g. income) per unit of time}
-#algorithmsToLiveBy #scheduling #algorithms #weightedShortestProcessingTime {An implementation of this algorithm is the "avalanch method" of paying the debt with the highest intereast rate}
+@definition @ganttChart @projectManagement {is a type of bar chart that illustrates a project schedule with times at top, and expected task completion as rows. Modern Gantt charts also show the dependency relationships between activities and current schedule status. They do not help determine which schedule is best.}
+@definition @ganttChart @projectManagement {Modern Gantt charts also show the dependency relationships between activities and current schedule status. They do not help determine which schedule is best.}
+@definition @ganttChart @projectManagement {is a type of bar chart that illustrates a project schedule with times at top, and expected task completion as rows. Modern Gantt charts also show the dependency relationships between activities and current schedule status. They do not help determine which schedule is best.}
+@algorithmsToLiveBy @scheduling @algorithms @definition @johnsonsRule {Johnson's rule or algorithm tries to minimize idle time between workers which are doing tasks must be done in sequence, such as washing and drying many load of laundary}
+@algorithmsToLiveBy @scheduling @algorithms @johnsonsRule {Johnson's rule is to start the shortest independent tasks first and shortest dependent task last. Sorting tasks like this minimizes idle time and maximizes total work per unit of time}
+@algorithmsToLiveBy @scheduling @algorithms {in scheduling for a single machine, if we have to do all tasks then the schedule does not matter. This assumes that tasks have no effect on each other}
+@algorithmsToLiveBy @scheduling @algorithms @definition @maximalLateness {of a set of tasks is the maximum of the lateness of the tasks}
+@algorithmsToLiveBy @scheduling @algorithms @definition @EarliestDueDate {is a scheduling method to reduce maximal lateness. For this, find the task due the soonest, and work your way down to the one due last}
+@algorithmsToLiveBy @scheduling @algorithms @EarliestDueDate {the length of the tasks to be done is completely irrelavant, only when they are due. This the optimal strategy to reduce maximal lateness.}
+@algorithmsToLiveBy @scheduling @algorithms @EarliestDueDate {may cause some/all tasks to be late. It is only minimizing the max lateness of the latest task, but it may make all tasks late by a smaller amount to do so.}
+@algorithmsToLiveBy @scheduling @algorithms @definition @mooreHodgeson {Moore-Hodgson algorithm is a scheduling method to reduce the number of late tasks. For this we start by sorting tasks by soonest due date. If it looks like we wont make a deadline, we remove/delete the most time-consuming task from the queue and repeat. If we cant delete, we can just put these tasks at the end of the queue since they will be late anyway}
+@algorithmsToLiveBy @scheduling @algorithms @definition @sumOfCompletionTimes {is the total time that completing a set of tasks takes}
+@algorithmsToLiveBy @scheduling @algorithms @definition @shortestProcessingTime {Shortest Processing Time or Shortest Job Next is the algorithm to optimally schedule for minimizing sum of completion times. For this, we always do the quickest task we can}
+@algorithmsToLiveBy @scheduling @algorithms @shortestProcessingTime {This is reccommanded in the book "Getting Things Done" in the format of "do any tasks that are < 2 minutes right away"}
+@algorithmsToLiveBy @scheduling @algorithms @shortestProcessingTime {allows the completion of the largest possible number of tasks, and minimizing the length of the todo list}
+@algorithmsToLiveBy @scheduling @algorithms @shortestProcessingTime {ignores the weight of tasks, i.e. their importance}
+@algorithmsToLiveBy @scheduling @algorithms @shortestProcessingTime {An implementation of this algorithm is the "snowball method" of paying the smallest debts first}
+@algorithmsToLiveBy @scheduling @definition @denialOfServiceAttack {flooding a scheduler with many superfluous requests to overwhelm it and prevent it from servicing anyone else}
+@algorithmsToLiveBy @scheduling @shortestProcessingTime {could lead into "hanging" as the quick and easy tasks keep coming in and prioritized at the expense of slower but more important tasks}
+@algorithmsToLiveBy @scheduling @algorithms @definition @weightedShortestProcessingTime {modifies shortest processing time by adding weights to tasks and doing the job with the highest weight to processing time ratio maximizes the value flow per unit of time}
+@algorithmsToLiveBy @scheduling @algorithms @weightedShortestProcessingTime {maximizes the value flow (e.g. income) per unit of time}
+@algorithmsToLiveBy @scheduling @algorithms @weightedShortestProcessingTime {An implementation of this algorithm is the "avalanch method" of paying the debt with the highest intereast rate}
 
 
 
