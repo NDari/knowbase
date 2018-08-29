@@ -20,7 +20,10 @@
 @algorithmsToLiveBy @scheduling @algorithms @definition @weightedShortestProcessingTime {modifies shortest processing time by adding weights to tasks and doing the job with the highest weight to processing time ratio maximizes the value flow per unit of time}
 @algorithmsToLiveBy @scheduling @algorithms @weightedShortestProcessingTime {maximizes the value flow (e.g. income) per unit of time}
 @algorithmsToLiveBy @scheduling @algorithms @weightedShortestProcessingTime {An implementation of this algorithm is the "avalanch method" of paying the debt with the highest intereast rate}
-@python @plot @matplotlib {to set plot size in matplotlib add `plt.figure(figsize=(xInches, yInches))` before you  plt.plot(thing)}
+@python @plot @matplotlib {to set plot size in matplotlib add `plt.figure(figsize=(xInches, yInches))` before you `plt.plot(thing)`}
 @python @spark @window {grouping by `fns.window(col("timestampColumn"), "1 minute")` allows you to bucket by duration, 1 minutes in this example.}
 @python {to import some random file and use its functions, do `import sys; import os; sys.path.append(os.path.abspath("/home/el/foo4/stuff")); from fileInStuff import thing;`}
 @awk @cli @csv {to select columns from a csv file do `cat file.csv | awk -F "\"*,\"*" '{printf "%s,\"%s\",\"%s\"\n", $7,$25,$26}'`}
+@sort @cli {to sort unique lines based on a column do: `sort -u -t, -k1,1 file` where `-u` is for unique, `-t,` to set comma as delimeter, and `k1,1` is for field 1}
+@spark @scala @udaf {how-to in https://docs.databricks.com/spark/latest/spark-sql/udaf-scala.html}
+@aws @linux @ec2 {mount an ebs volume to an ec2 instance https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html}
